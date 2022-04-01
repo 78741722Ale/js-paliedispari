@@ -13,7 +13,7 @@ Dichiariamo chi ha vinto.
 /// L’utente sceglie pari o dispari
 const userChoice = prompt("Pari o dispari ?")
 // L’utente inserisce un numero da 1 a 5
-const userNumber = prompt("Scegli un numero da 1 a 5")
+const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
 // Verifico che l'utente abbia inserito bene i dati
 if (isNaN(`${userNumber}`)) {
     // E' effettivamente un valore numerico?
@@ -29,14 +29,27 @@ if (isNaN(`${userNumber}`)) {
 console.log(userChoice, userNumber);
 
 /// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). 
-
+console.log("Prima Funzione - PC Number");
 function pc_Number() {
     // Variabile random del PC
-    let pcNumber = Math.floor(Math.random() * 4) + 1;
-    // Verifica in console log
-    console.log(pcNumber);
+    let pcNumber = parseInt(Math.floor(Math.random() * 4) + 1)
     // Valore di ritorno
     return pcNumber
 }
 // Verifico anche fuori da funzione
-console.log(pc_Number());
+let pcNumber = pc_Number()
+console.log(pcNumber);
+
+// Sommiamo i due numeri (ancora dentro a una funzione)
+console.log("Seconda Funzione - Somma tra numeri");
+function sumNumbers(userNumber, pcNumber) {
+    // Variabile somma 
+    let sum = parseInt(userNumber + pcNumber);
+    // Valore di ritorno
+    return sum;
+}
+
+// Dichiaro la somma fuori dalla funzione
+let sum = sumNumbers(userNumber, pcNumber);
+console.log(sum);
+
