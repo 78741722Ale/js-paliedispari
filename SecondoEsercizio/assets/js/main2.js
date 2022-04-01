@@ -10,7 +10,7 @@ Dichiariamo chi ha vinto.
 
 */
 
-// L’utente sceglie pari o dispari
+/// L’utente sceglie pari o dispari
 const userChoice = prompt("Pari o dispari ?")
 // L’utente inserisce un numero da 1 a 5
 const userNumber = prompt("Scegli un numero da 1 a 5")
@@ -25,9 +25,18 @@ if (isNaN(`${userNumber}`)) {
     console.log("Ok, può proseguire");
 }
 
-
 // Logghiamo in console per verificare i valori dichiarati
 console.log(userChoice, userNumber);
 
+/// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). 
 
-
+function pc_Number() {
+    // Variabile random del PC
+    let pcNumber = Math.floor(Math.random() * 4) + 1;
+    // Verifica in console log
+    console.log(pcNumber);
+    // Valore di ritorno
+    return pcNumber
+}
+// Verifico anche fuori da funzione
+console.log(pc_Number());
