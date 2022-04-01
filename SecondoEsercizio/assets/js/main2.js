@@ -40,11 +40,28 @@ function pc_Number() {
 let pcNumber = pc_Number()
 console.log(pcNumber);
 
+// Condizione valore booleano
+let control = true;
+
 // Sommiamo i due numeri (ancora dentro a una funzione)
 console.log("Seconda Funzione - Somma tra numeri");
 function sumNumbers(userNumber, pcNumber) {
     // Variabile somma 
     let sum = parseInt(userNumber + pcNumber);
+    // Condizione pari o dispari
+    if (sum % 2 === 0) {
+        control = false;
+        console.log("Il numero è Pari");
+    } else if (sum != 2 ===0) {
+        console.log("Il numero è Dispari");
+    }
+
+    // Altra condizione, dichiaro il vincitore
+    if (userNumber > pcNumber) {
+        alert("Hai vinto, complimenti!")
+    } else {
+        alert("Mi dispiace, Hai perso!")
+    }
     // Valore di ritorno
     return sum;
 }
